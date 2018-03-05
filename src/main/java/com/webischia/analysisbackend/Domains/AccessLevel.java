@@ -9,7 +9,7 @@ import java.util.Date;
 @Data
 public class AccessLevel {
 
-
+    //gerek var mı tartışılması için
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
