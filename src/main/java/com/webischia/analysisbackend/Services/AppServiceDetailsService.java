@@ -32,6 +32,9 @@ public class AppServiceDetailsService implements UserDetailsService {
         }
 
         List<GrantedAuthority> authorities = new ArrayList<>();
+   /*     user.getAccessLevel().forEach(role -> {
+            authorities.add(new SimpleGrantedAuthority(role.getRoleName()));
+        });*/
         AccessLevel accessLevel = user.getAccessLevel();
         authorities.add(new SimpleGrantedAuthority(accessLevel.getDescription()));
 
