@@ -26,13 +26,13 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         resources.resourceId(resourceIds).tokenServices(tokenServices);
     }
 
-    @Override
+    @Override //nerelere izin var nerelerde izin yok -- mobil uyg olacağı için heryer yasak
     public void configure(HttpSecurity http) throws Exception {
         http
                 .requestMatchers()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/api/register/**").permitAll()
+                //.antMatchers("/api/register/**").permitAll()
                 .antMatchers("/api/v1/**" ).authenticated();
     }
 

@@ -14,7 +14,7 @@ public class User {
 
     private String name;
     private String surname;
-    @Column(unique = true)
+    @Column(unique = true) //jpa unique constraint
     private String email;
     private String phone;
     private String password;
