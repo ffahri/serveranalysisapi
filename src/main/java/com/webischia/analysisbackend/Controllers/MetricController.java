@@ -37,7 +37,6 @@ public class MetricController {
         HttpURLConnection request = (HttpURLConnection) url2.openConnection();
         request.connect();
 
-        // Convert to a JSON object to print data
         BufferedReader br = new BufferedReader(new InputStreamReader((InputStream) request.getContent()));
         String inputLine;
         StringBuilder sb = new StringBuilder();
@@ -47,7 +46,6 @@ public class MetricController {
         }
         br.close();
 
-        //String json = restTemplate.getForObject(url,String.class);
         System.out.println(sb.toString());
         return new ResponseEntity<String>(sb.toString(), HttpStatus.OK);
         //return new ResponseEntity<String>("TEST " + rq, HttpStatus.OK);
