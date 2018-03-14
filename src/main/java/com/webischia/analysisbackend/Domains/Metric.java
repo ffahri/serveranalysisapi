@@ -5,8 +5,8 @@ import lombok.Data;
 import javax.persistence.Entity;
 import java.util.Date;
 
-@Entity
-@Data
+//@Entity
+//@Data
 public class Metric {
     private Date timestamp;
     private String instance;
