@@ -47,7 +47,7 @@ public class MetricController {
         br.close();
 
         System.out.println(sb.toString());
-        return new ResponseEntity<String>(sb.toString(), HttpStatus.OK);
+        return new ResponseEntity<String>(sb.toString(), HttpStatus.OK); //proxying prometheus todo check security XSS
         //return new ResponseEntity<String>("TEST " + rq, HttpStatus.OK);
     }
 }
