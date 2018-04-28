@@ -33,7 +33,17 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 //.antMatchers("/api/register/**").permitAll()
-                .antMatchers("/api/v1/**" ).authenticated();
+                .antMatchers("/").permitAll()
+                .antMatchers("/api/v1/**").authenticated()
+                .and()
+                .authorizeRequests().antMatchers("/config/**").hasRole("Admin").anyRequest().authenticated()
+                .and()
+                .formLogin()
+                .loginPage("/giris")
+                .permitAll()
+                .and()
+                .httpBasic();
+
     }
 
 }
