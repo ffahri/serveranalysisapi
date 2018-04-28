@@ -28,7 +28,7 @@ public class MetricController {
     @GetMapping("/{rq}")
     public ResponseEntity<String> getById(@PathVariable String rq) throws IOException {
 
-        String url = "http://52.15.130.207:9090/api/v1/query?query=" + rq;
+        String url = "http://prometheus:9090/api/v1/query?query=" + rq;
 
         System.out.println(url);
         UriComponentsBuilder uriBuilder = UriComponentsBuilder
