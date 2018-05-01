@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: serveranalysisbackend 
+  labels:
+    app: serveranalysisbackend
+spec:
+  containers:
+  - name: serveranalysisbackend
+    image: ffahri/android_backend
+    ports:
+    - containerPort: 8080
